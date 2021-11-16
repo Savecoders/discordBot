@@ -9,7 +9,7 @@ client.on('ready', () => {
 });
 
 client.off('off', () => {
-	console.log('Bot in off :(');
+	console.log('Bot in off');
 });
 
 client.on('message', (msg) => {
@@ -37,13 +37,6 @@ client.on('message', (msg) => {
 		msg.channel.send(attachment);
 	}
 	//putearFRani
-	if (msg.content.toLowerCase() === `${identify}putearfrani`) {
-		const attachment = new MessageAttachment(
-			'https://cdn.discordapp.com/attachments/805228943136784407/847665547696537640/d130fc114b1982de257c533d38c680c66a388c45d2da581862d13620e226555b.png'
-			//'https://i.pinimg.com/originals/12/ac/eb/12acebfd4187d23ae7acff27198a2f9b.jpg'
-		);
-		msg.channel.send(attachment);
-	}
 	if (msg.content === `${identify}clasico`) {
 		const attachMessage = new MessageAttachment(
 			'https://media.discordapp.net/attachments/805228943136784407/852376199916814376/imagen_2021-06-09_213159.png?width=221&height=221'
@@ -62,17 +55,6 @@ client.on('message', (msg) => {
 		);
 		msg.channel.send(attachment);
 	}
-	//helloJs
-	if (msg.content.startsWith(`${identify}hello`)) {
-		const userMentions = msg.mentions.users.first();
-		if (userMentions) {
-			msg.channel.send(`hello ${userMentions}`);
-		} else {
-			msg.channel.send(`hello ${msg.author}`);
-		}
-	}
-	//statusJs
-
 	//clearMessageJs
 	if (msg.content === `${identify}clearMessage`) {
 		try {
